@@ -13,8 +13,8 @@ function createBoxes(amount) {
   let lastElementHeight;
 
   if (lastElementOfCollection === null) {
-    lastElementWidth = 30;
-    lastElementHeight = 30;
+    lastElementWidth = 20;
+    lastElementHeight = 20;
   } else {
     lastElementWidth = lastElementOfCollection.offsetWidth;
     lastElementHeight = lastElementOfCollection.offsetHeight;
