@@ -1,8 +1,8 @@
 const categories = document.querySelectorAll('.item');
 const arrCategories = Array.from(categories).map(item => {
   return {
-    category: item.querySelector('h2').textContent,
-    elements: item.querySelectorAll('ul > li').length,
+    category: item.firstElementChild.textContent,
+    elements: item.lastElementChild.children.length,
   };
 });
 

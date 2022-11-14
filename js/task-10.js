@@ -19,14 +19,15 @@ function createBoxes(amount) {
     lastElementWidth = lastElementOfCollection.offsetWidth;
     lastElementHeight = lastElementOfCollection.offsetHeight;
   }
-
+  const arrOfElems = [];
   for (let i = 1; i <= amount; i += 1) {
     const createElem = document.createElement('div');
     createElem.style.width = lastElementWidth + i * 10 + 'px';
     createElem.style.height = lastElementHeight + i * 10 + 'px';
     createElem.style.backgroundColor = getRandomHexColor();
-    collectionBox.append(createElem);
+    arrOfElems.push(createElem);
   }
+  collectionBox.append(...arrOfElems);
 }
 
 const destroyBoxes = () => {
